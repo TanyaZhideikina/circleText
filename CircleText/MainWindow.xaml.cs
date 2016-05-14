@@ -12,17 +12,37 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
-namespace CircleText
+namespace CustomToolTip
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserControl1 : UserControl
     {
-        public MainWindow()
+        public UserControl1()
         {
             InitializeComponent();
+        }
+
+        public double UserControlToolTipX
+        {
+            get { return this.UserControlToolTipXY.X; }
+            set { this.UserControlToolTipXY.X = value; }
+        }
+
+        public double UserControlToolTipY
+        {
+            get { return this.UserControlToolTipXY.Y; }
+            set { this.UserControlToolTipXY.Y = value; }
+        }
+
+        public string UserControlTextBlockToolTip
+        {
+            get { return TextBlockToolTip.Text; }
+            set { TextBlockToolTip.Text = value; }
+        }
+
+        public string UserControlToolTipTitle
+        {
+            get { return ToolTipTitle.Text; }
+            set { ToolTipTitle.Text = value; }
         }
     }
 }
